@@ -63,7 +63,7 @@ const members = [
             "Self-Healing Cloud Web Application: Managed on AWS EC2 using systemd, shell scripting, and cron jobs for automatic recovery.",
             "Automated Monitoring: Designed systems to run autonomously, improving reliability and uptime."
         ],
-        certification: "Cloud Computing fundamentals",
+        certification: "Cloud Engineer",
         skills: ["Git/GitHub", "Jenkins", "AWS (EC2, S3, IAM, VPC)", "Docker", "Kubernetes", "Linux/Bash", "C/C++", "Java", "Python"]
     }
 ];
