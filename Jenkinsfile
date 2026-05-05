@@ -2,27 +2,21 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone') {
+        stage('Clone Code') {
             steps {
-                echo 'Code already available'
+                git branch: 'main', url: 'https://github.com/ashish-o6/project-pu.git'
             }
         }
 
-        stage('Build') {
+        stage('Build Docker Image') {
             steps {
-                sh 'echo "Building..."'
+                sh 'docker build -t my-node-app .'
             }
         }
 
-        stage('Test') {
+        stage('Run Container') {
             steps {
-                sh 'echo "Testing..."'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                sh 'echo "Deploying..."'
+                sh 'docker run -d -p 3000:3000 my-node-app'
             }
         }
     }
